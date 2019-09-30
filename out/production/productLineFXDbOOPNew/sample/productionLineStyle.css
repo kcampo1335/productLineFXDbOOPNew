@@ -1,0 +1,9 @@
+.main-tab-pane{
+    -fx-background-color: "teal";
+}
+.table-view{
+    -fx-background-color: "pink";
+}
+.text-area{
+    -fx-background-color: "yellow";
+}
