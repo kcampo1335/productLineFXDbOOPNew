@@ -17,7 +17,7 @@ This was created as a project for < br />
 
 ## Demonstration
 
-<iframe src="https://giphy.com/embed/PnJByBuGBswRSNBHJ4" width="472" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/PnJByBuGBswRSNBHJ4">via GIPHY</a></p>
+![](COP3003.gif)
 
 ## Documentation
 
