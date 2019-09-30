@@ -1,18 +1,9 @@
 # ProductLineFXDbOOPNEW
 
-Project Scenerio  < br/>
-You have been hired to create software for a media player production facility that will keep track of what products are produced. < br />
+Project Scenerio  
+You have been hired to create software for a media player production facility that will keep track of what products are produced. Without the software, workers on the production floor are physically producing items and having to write down what is produced in a production log book. Management would like the production tracking to be more automated so the workers don't need to spend as much time recording what was produced, the log will be more accurate, and it will be easier to generate production reports.
 
-Without the software, workers on the production floor are physically producing items and having to write down what is produced in a production log book. < br/>
-
-Management would like the production tracking to be more automated so the workers don't need to spend as much time recording what was produced, the log will be more accurate, and it will be easier to generate production reports. < br/>
-
-In addition to the ability to record production, the software also needs the ability to add to the product line (the catalog of products that are able to be produced).
-I created this project with the guidance of Prof. Vanselow <br/>
-I created this project on 9/30/2019. I had completed week 1 tto 3 previously, but had to delete it after having a Java/IntelliJ issue < br/>
-I created this project as an assignment to help learn to make a GUI and Basic Database.
-This project was created by me as a Software Engineering student at Florida Gulf Coast University. <br/>
-This was created as a project for <br/>
+In addition to the ability to record production, the software also needs the ability to add to the product line (the catalog of products that are able to be produced). I created this project with the guidance of Prof. Vanselow. I created this project on 9/30/2019. I had completed week 1 tto 3 previously, but had to delete it after having a Java/IntelliJ issue. I created this project as an assignment to help learn to make a GUI and Basic Database. This project was created by me as a Software Engineering student at Florida Gulf Coast University. This was created as a project for 
  
 
 ## Demonstration
@@ -41,7 +32,7 @@ Note for school project: You want a potential client or hirer to be able to run 
 
 ## Built With
 
-* IDE used  
+* IDE used is IntelliJ 
 * Other software used  
 * Resources used  
 <br />Note for school project: Every section is an opportunity to make an impression. You could briefly add what you know about the IDE and describe your development skills. 
