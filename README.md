@@ -1,18 +1,18 @@
 # ProductLineFXDbOOPNEW
 
-Project Scenerio  < br />
+Project Scenerio  < br/>
 You have been hired to create software for a media player production facility that will keep track of what products are produced. < br />
 
-Without the software, workers on the production floor are physically producing items and having to write down what is produced in a production log book. < br />
+Without the software, workers on the production floor are physically producing items and having to write down what is produced in a production log book. < br/>
 
-Management would like the production tracking to be more automated so the workers don't need to spend as much time recording what was produced, the log will be more accurate, and it will be easier to generate production reports. < br />
+Management would like the production tracking to be more automated so the workers don't need to spend as much time recording what was produced, the log will be more accurate, and it will be easier to generate production reports. < br/>
 
 In addition to the ability to record production, the software also needs the ability to add to the product line (the catalog of products that are able to be produced).
-I created this project with the guidance of Prof. Vanselow <br />
+I created this project with the guidance of Prof. Vanselow <br/>
 I created this project on 9/30/2019. I had completed week 1 tto 3 previously, but had to delete it after having a Java/IntelliJ issue < br/>
 I created this project as an assignment to help learn to make a GUI and Basic Database.
-This project was created by me as a Software Engineering student at Florida Gulf Coast University. < br/>
-This was created as a project for < br />
+This project was created by me as a Software Engineering student at Florida Gulf Coast University. <br/>
+This was created as a project for <br/>
  
 
 ## Demonstration
