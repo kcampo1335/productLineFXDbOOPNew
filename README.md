@@ -17,7 +17,7 @@ This was created as a project for < br />
 
 ## Demonstration
 
-![](C:\Users\kcamp\OneDrive\Desktop\COP3003.gif)
+![COP3003 GIF](C:\Users\kcamp\OneDrive\Desktop\COP3003.gif)
 
 ## Documentation
 
