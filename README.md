@@ -17,7 +17,7 @@ This was created as a project for < br />
 
 ## Demonstration
 
-\!\[Alt GIF]\("C:\Users\kcamp\OneDrive\Desktop\COP3003.gif") <br />
+\!\[Alt GIF]\(C:\Users\kcamp\OneDrive\Desktop\COP3003.gif) <br />
 
 ## Documentation
 
