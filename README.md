@@ -1,18 +1,9 @@
 # ProductLineFXDbOOPNEW
 
-Project Scenerio  < br />
-You have been hired to create software for a media player production facility that will keep track of what products are produced. < br />
+Project Scenerio  
+You have been hired to create software for a media player production facility that will keep track of what products are produced. Without the software, workers on the production floor are physically producing items and having to write down what is produced in a production log book. Management would like the production tracking to be more automated so the workers don't need to spend as much time recording what was produced, the log will be more accurate, and it will be easier to generate production reports.
 
-Without the software, workers on the production floor are physically producing items and having to write down what is produced in a production log book. < br />
-
-Management would like the production tracking to be more automated so the workers don't need to spend as much time recording what was produced, the log will be more accurate, and it will be easier to generate production reports. < br />
-
-In addition to the ability to record production, the software also needs the ability to add to the product line (the catalog of products that are able to be produced).
-I created this project with the guidance of Prof. Vanselow <br />
-I created this project on 9/30/2019. I had completed week 1 tto 3 previously, but had to delete it after having a Java/IntelliJ issue < br/>
-I created this project as an assignment to help learn to make a GUI and Basic Database.
-This project was created by me as a Software Engineering student at Florida Gulf Coast University. < br/>
-This was created as a project for < br />
+In addition to the ability to record production, the software also needs the ability to add to the product line (the catalog of products that are able to be produced). I created this project with the guidance of Prof. Vanselow. I created this project on 9/30/2019. I had completed week 1 tto 3 previously, but had to delete it after having a Java/IntelliJ issue. I created this project as an assignment to help learn to make a GUI and Basic Database. This project was created by me as a Software Engineering student at Florida Gulf Coast University. This was created as a project for 
  
 
 ## Demonstration
@@ -29,9 +20,7 @@ Sample: \[JavaDoc]\(https://pv-cop.github.io/PV-README-TEMPLATE/javadoc/index.ht
 
 ## Diagrams
 
-Such as a class diagram. <br /> 
-The markdown is  \!\[Alt text\]\(relative/path/to/img.png) <br />
- ![Sample Image](docs/9919.png)
+<img src="https://i.ibb.co/7kmyxqy/diagram.jpg" alt="diagram" border="0"></a>
 
 ## Getting Started
 
@@ -43,13 +32,12 @@ Note for school project: You want a potential client or hirer to be able to run 
 
 ## Built With
 
-* IDE used  
-* Other software used  
-* Resources used  
-<br />Note for school project: Every section is an opportunity to make an impression. You could briefly add what you know about the IDE and describe your development skills. 
+* IDE used is IntelliJ 
+* Other software used - github, H2, Scene Builder
+
 
 ## Contributing
-
+* My Prof. Vanselow assisted with the teaching of this project.
 
 
 ## Author
@@ -72,15 +60,21 @@ To choose a license, see https://choosealicense.com/
 ## Acknowledgments
 
 * Web sites utilized
+Prof. Vanselows course website.
+https://sites.google.com/site/profvanselow/course/cop-3003/oop-project?authuser=0
+Tutorials Point
+https://www.tutorialspoint.com/javafx/javafx_css.htm
+
 * Classmates who helped
+
 * Your professor or TA if they helped
+Professor Vanselow
 
 ## History
 
-Information about what has changed. 
+9/30/2019 Sprint One completed.
+10/3/2019 Updated CSS file on project to improve GUI.
 
 ## Key Programming Concepts Utilized
 
-This section would not necessarily be in a real README.  <br />
-It is a reference for you and a place to impress potential employers with your knowledge. 
-Identify what concepts you utilize so when you need to use them again you will know that you will find them here. Include a brief description of the concepts in your own words to help you prepare for related interview questions. 
+
