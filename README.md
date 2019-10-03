@@ -38,7 +38,7 @@ Note for school project: You want a potential client or hirer to be able to run 
 <br />Note for school project: Every section is an opportunity to make an impression. You could briefly add what you know about the IDE and describe your development skills. 
 
 ## Contributing
-
+* My Prof. Vanselow assisted with the teaching of this project.
 
 
 ## Author
@@ -61,15 +61,21 @@ To choose a license, see https://choosealicense.com/
 ## Acknowledgments
 
 * Web sites utilized
+Prof. Vanselows course website.
+https://sites.google.com/site/profvanselow/course/cop-3003/oop-project?authuser=0
+Tutorials Point
+https://www.tutorialspoint.com/javafx/javafx_css.htm
+
 * Classmates who helped
+
 * Your professor or TA if they helped
+Professor Vanselow
 
 ## History
 
-Information about what has changed. 
+9/30/2019 Sprint One completed.
+10/3/2019 Updated CSS file on project to improve GUI.
 
 ## Key Programming Concepts Utilized
 
-This section would not necessarily be in a real README.  <br />
-It is a reference for you and a place to impress potential employers with your knowledge. 
-Identify what concepts you utilize so when you need to use them again you will know that you will find them here. Include a brief description of the concepts in your own words to help you prepare for related interview questions. 
+
