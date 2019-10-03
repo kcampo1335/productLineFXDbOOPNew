@@ -46,16 +46,16 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label text="Product Name" />
-                              <Label text="Manufacturer" GridPane.rowIndex="1" />
+                              <Label text="Product Name" textFill="#e6fe0f" />
+                              <Label text="Manufacturer" textFill="#e3f420" GridPane.rowIndex="1" />
                               <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <TextField GridPane.columnIndex="1" />
                               <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label text="Item Type" GridPane.rowIndex="2" />
+                              <Label text="Item Type" textFill="#f5fc13" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Button fx:id="AddProductButton" layoutX="150.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleAddProductButton" text="Add Product" />
-                        <Label layoutX="14.0" layoutY="182.0" text="Existing Products" />
+                        <Label layoutX="14.0" layoutY="182.0" text="Existing Products" textFill="#d4d415" />
                         <TableView layoutX="109.0" layoutY="171.0" prefHeight="77.0" prefWidth="165.0" stylesheets="@productionLineStyle.css">
                           <columns>
                             <TableColumn prefWidth="75.0" text="C1" />
@@ -69,9 +69,9 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="35.0" layoutY="6.0" text="Choose Product" />
+                        <Label layoutX="35.0" layoutY="6.0" text="Choose Product" textFill="#dc19c9" />
                         <ListView layoutX="14.0" layoutY="30.0" prefHeight="121.0" prefWidth="126.0" />
-                        <Label layoutX="175.0" layoutY="30.0" text="Choose Quantity" />
+                        <Label layoutX="175.0" layoutY="30.0" text="Choose Quantity" textFill="#eb20d3" />
                         <ComboBox fx:id="ProducesCombo" layoutX="144.0" layoutY="66.0" prefWidth="150.0" />
                         <Button fx:id="RecordProductionButton" layoutX="161.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleRecordProductionButton" text="Record Production" />
                      </children>

@@ -2,8 +2,11 @@
     -fx-background-color: "teal";
 }
 .table-view{
-    -fx-background-color: "pink";
+    -fx-background-color: "yellow";
 }
 .text-area{
-    -fx-background-color: "yellow";
+    -fx-background-color: "gray";
+}
+.list-view{
+    -fx-background-color: "pink"
 }
