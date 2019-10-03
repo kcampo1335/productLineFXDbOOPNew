@@ -33,9 +33,8 @@ Note for school project: You want a potential client or hirer to be able to run 
 ## Built With
 
 * IDE used is IntelliJ 
-* Other software used  
-* Resources used  
-<br />Note for school project: Every section is an opportunity to make an impression. You could briefly add what you know about the IDE and describe your development skills. 
+* Other software used - github, H2, Scene Builder
+
 
 ## Contributing
 * My Prof. Vanselow assisted with the teaching of this project.
