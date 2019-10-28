@@ -1,12 +1,6 @@
-.main-tab-pane{
-    -fx-background-color: "teal";
+root {
+    display: block;
 }
-.table-view{
-    -fx-background-color: "yellow";
-}
-.text-area{
-    -fx-background-color: "gray";
-}
-.list-view{
-    -fx-background-color: "pink"
+.root{
+    -fx-background-image: url("backgroundImage.jpg")
 }
