@@ -2,53 +2,29 @@ package sample;
 
 import java.util.Date;
 
-public class ProductionRecord{
+class ProductionRecord{
+
+
+    private String Manufacturer;
     private int productionNumber;
     private int productID;
-    private String serialNumber;
-    private Date dateProduced;
+    private String serialNum;
+    private Date dateProduced = new Date();
+    private int itemCount;
+    private ItemType Type;
 
-    public ProductionRecord(int productID){
-        this.productID = productID;
-        productionNumber = 0;
-        serialNumber = "0";
-        dateProduced = new Date();
-    }
 
-    public ProductionRecord(int productionNumber, int productID, String serialNumber, Date dateProduced){
-        this.productID = productID;
-        this.productionNumber = productionNumber;
-        this.dateProduced = dateProduced;
-        this.serialNumber = serialNumber;
 
+    public ProductionRecord(Product product, int itemCount){
+        this.productID = product.getId();
+        this.Manufacturer = product.getManufacturer();
+        this.itemCount = itemCount;
+        Type = product.getType();
+        this.serialNum = this.Manufacturer.substring(0, 3) + product.getType().label() + "0000"+ this.itemCount;
     }
 
-    public String toString() {
-        return "Prod. Num: " + productionNumber + " Product ID: " + productID + " Serial Num: " + serialNumber + " Date: " + dateProduced;
+    public String toString(){
+        return "Prod. Num: " + productionNumber + " Product ID: " + productID + " Serial Num: " + serialNum + " Date: " + dateProduced;
     }
 
-    public int getProductionNum(){
-        return productionNumber;
-    }
-    public void setProductionNum(int productionNumber){
-        this.productionNumber = productionNumber;
-    }
-    public int getProductID(){
-        return productID;
-    }
-    public void setProductID(int productID){
-        this.productID = productID;
-    }
-    public String getSerialNum(){
-        return serialNumber;
-    }
-    public void setSerialNum(String serialNumber){
-        this.serialNumber = serialNumber;
-    }
-    public Date getProdDate(){
-        return dateProduced;
-    }
-    public void setProdDate(Date dateProduced){
-        this.dateProduced = dateProduced;
-    }
 }

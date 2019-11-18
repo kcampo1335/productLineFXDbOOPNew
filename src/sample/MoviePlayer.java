@@ -6,7 +6,7 @@ public class MoviePlayer extends Product implements MultimediaControl {
     MonitorType monitorType;
 
     MoviePlayer(String Name, String Manufacturer, Screen sCreen, MonitorType monitoRType){
-        super(Name, Manufacturer, "VISUAL");
+        super(Name, Manufacturer,ItemType.VISUAL);
         setScreen(sCreen);
         setMonitorType(monitoRType);
     }

@@ -3,6 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 
 import java.sql.*;  // for initialization method
@@ -15,6 +16,8 @@ public class Controller {
     @FXML public Button RecordProductionButton;
 
     @FXML private ComboBox<Integer> ProducesCombo;
+
+    @FXML public ChoiceBox itemTypeChoiceBox;
 
     public void handleRecordProductionButton() {
         System.out.println(" Production Recorded");
