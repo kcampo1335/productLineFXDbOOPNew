@@ -1,13 +1,32 @@
 package sample;
 
+/**
+ * The type Product.
+ */
 public abstract class Product implements Item {
 
     private int Id;
-    private ItemType Type;
-    private String Manufacturer;
-    private String Name;
+    /**
+     * The Type.
+     */
+    public ItemType Type;
+    /**
+     * The Manufacturer.
+     */
+    public String Manufacturer;
+    /**
+     * The Name.
+     */
+    public String Name;
 
 
+    /**
+     * Instantiates a new Product.
+     *
+     * @param name         the name
+     * @param manufacturer the manufacturer
+     * @param type         the type
+     */
     Product(String name, String manufacturer, ItemType type) {
         this.Name = name;
         this.Manufacturer = manufacturer;
@@ -18,9 +37,12 @@ public abstract class Product implements Item {
         return Type;
     }
 
-    public String toString() {
-        return "Name: " + Name + "\n" + "Manufacturer: " + Manufacturer + "\n" + "Type: "
-                + Type;
+    /**
+     * Set type.
+     */
+    public void setType() {
+        ItemType type = null;
+        Type = type;
     }
 
     public int getId() {
@@ -44,9 +66,3 @@ public abstract class Product implements Item {
     }
 }
 
-class Widget extends Product{
-    Widget(String name, String manufacturer, ItemType type) {
-
-        super(name, manufacturer, type);
-    }
-}

@@ -1,39 +1,143 @@
 package sample;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.*;  // for initialization method
 
 
+/**
+ * The type Controller. Controls sample.fxml
+ */
 public class Controller {
 
+    /**
+     * The Add product button.
+     */
     @FXML public Button AddProductButton;
-
+    /**
+     * The Record production button.
+     */
     @FXML public Button RecordProductionButton;
+    @FXML public ComboBox<Integer> producesCombo;
+    /**
+     * The Item type choice box.
+     */
+    @FXML public ChoiceBox<String> itemTypeChoiceBox;
+    /**
+     * The Table view.
+     */
+    @FXML public TableView<Product> tableView;
+    /**
+     * The Table col one.
+     */
+    @FXML public TableColumn <?, ?> tableColOne;
+    /**
+     * The Table col two.
+     */
+    @FXML public TableColumn <?, ?> tableColTwo;
+    /**
+     * The Table col three.
+     */
+    @FXML public TableColumn <?, ?> tableColThree;
+    /**
+     * The List view one.
+     */
+    @FXML public ListView<Product> listViewOne;
+    /**
+     * The Text area.
+     */
+    @FXML public TextArea textArea;
+    /**
+     * The Product name box.
+     */
+    @FXML public TextField productNameBox;
+    /**
+     * The Manufacturer name box.
+     */
+    @FXML public TextField manufacturerNameBox;
 
-    @FXML private ComboBox<Integer> ProducesCombo;
 
-    @FXML public ChoiceBox itemTypeChoiceBox;
+    //global
+    private Connection conn;
 
+    private final ObservableList< Product> ProductLine = FXCollections.observableArrayList();
+
+    /**
+     * Handle record production button.
+     */
     public void handleRecordProductionButton() {
         System.out.println(" Production Recorded");
     }
 
-    public void handleAddProductButton(ActionEvent actionEvent) {
+    /**
+     * Handle add product button.
+     *
+     * @param actionEvent the action event
+     * @throws SQLException the sql exception
+     */
+    public void handleAddProductButton(ActionEvent actionEvent) throws SQLException {
         System.out.println(" Added Product");
+        String productName = productNameBox.getText();
+        String manufacturerName = manufacturerNameBox.getText();
+        String productChoice = itemTypeChoiceBox.getValue();
+
+        String dataInfo = "Insert into PRODUCT( NAME, TYPE, MANUFACTURER) VALUES (?,?,?)";
+
+        PreparedStatement preparedStatement = conn.prepareStatement(dataInfo);
+        preparedStatement.setString(1,productName);
+        preparedStatement.setString(2,manufacturerName);
+        preparedStatement.setString(3,productChoice);
+        preparedStatement.executeUpdate();
+        productNameBox.clear();
+        manufacturerNameBox.clear();
+
+        tableColOne.setCellValueFactory(new PropertyValueFactory<>("name"));
+        tableColTwo.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
+        tableColThree.setCellValueFactory(new PropertyValueFactory<>("type"));
+        tableView.setItems(ProductLine);
+        listViewOne.setItems(ProductLine);
+        preparedStatement.close();
+        conn.close();
     }
 
-    public void initialization(){
+    /**
+     * Initialize.
+     */
+    public void initialize() {
+        initializationData();
+        ObservableList<Integer> prodQuantity = FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10);
+
+
+        producesCombo.setItems(prodQuantity);
+        producesCombo.getSelectionModel().selectFirst();
+        producesCombo.setEditable(true);
+
+        ObservableList<String> itemList = FXCollections.observableArrayList();
+        for( ItemType itemTypeChoice: ItemType.values()) {
+            System.out.println(itemTypeChoice + " " + itemTypeChoice.label);
+            itemList.add(new String().valueOf(itemTypeChoice));
+
+        }
+        itemTypeChoiceBox.getItems().addAll(itemList);
+        ProductionRecord prodRecord = new ProductionRecord(0);
+        String prod = prodRecord.toString();
+
+    }
+
+    /**
+     * Initialization data.
+     */
+    public void initializationData(){
 
         //  Database credentials
         final String JDBC_DRIVER = "org.h2.Driver";
         final String DB_URL = "jdbc:h2:./res/ProductionLine";
 
-        Connection conn;
         Statement stmt;
 
         try {
@@ -43,28 +147,10 @@ public class Controller {
             //STEP 2: Open a connection
             conn = DriverManager.getConnection(DB_URL);
 
-            //STEP 3: Execute a query
-            stmt = conn.createStatement();
-            String sql = "INSERT INTO Product(type, manufacturer, name) VALUES ( 'AUDIO', 'Apple', 'iPod' )";
 
-            stmt.executeQuery(sql);
-
-
-            // STEP 4: Clean-up environment
-            stmt.close();
-            conn.close();
-
-
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i <= 10; i++) {
-            ProducesCombo.getItems().add(i);
-        }
-        ProducesCombo.getSelectionModel().selectFirst();
-        ProducesCombo.setEditable(true);
+
     }
 }

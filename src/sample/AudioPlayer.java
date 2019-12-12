@@ -1,22 +1,34 @@
 package sample;
+
 import sample.MultimediaControl;
 import sample.Product;
 
+/**
+ * The type Audio player.
+ */
 public class AudioPlayer extends Product implements MultimediaControl {
 
-    private String audioSpecification;
-    private String mediaType;
+    private String supportedAudioFormats;
+    private String supportedPlaylistFormats;
 
-    AudioPlayer(
-            String name, String manufacturer, ItemType type, String audioSpecification, String mediaType) {
+    /**
+     * Instantiates a new Audio player.
+     *
+     * @param name                     the name
+     * @param manufacturer             the manufacturer
+     * @param type                     the type
+     * @param supportedAudioFormats    the supported audio formats
+     * @param supportedPlaylistFormats the media type
+     */
+    AudioPlayer(String name, String manufacturer, ItemType type, String supportedAudioFormats, String supportedPlaylistFormats) {
         super(name, manufacturer, type);
-        this.audioSpecification = audioSpecification;
-        this.mediaType = mediaType;
+        this.supportedAudioFormats = supportedAudioFormats;
+        this.supportedPlaylistFormats = supportedPlaylistFormats;
     }
 
     public String toString() {
-        String spec = "\nSupported Audio Formats: " + this.audioSpecification + '\n';
-        String media = "Supported Playlist Formats: " + this.mediaType;
+        String spec = "\nSupported Audio Formats: " + this.supportedAudioFormats + '\n';
+        String media = "Supported Playlist Formats: " + this.supportedPlaylistFormats;
         return super.toString() + spec + media;
     }
 
@@ -36,19 +48,44 @@ public class AudioPlayer extends Product implements MultimediaControl {
         System.out.println("Previous");
     }
 
-    public String getAudioSpecification() {
-        return audioSpecification;
+    /**
+     * Gets audio specification.
+     *
+     * @return the audio specification
+     */
+    public String getsupportedAudioFormats() {
+        return supportedAudioFormats;
     }
 
-    public void setAudioSpecification(String audioSpecification) {
-        this.audioSpecification = audioSpecification;
+    /**
+     * Sets audio specification.
+     *
+     * @param supportedAudioFormats the audio specification
+     */
+    public void setsupportedAudioFormats(String supportedAudioFormats) {
+        this.supportedAudioFormats = supportedAudioFormats;
     }
 
-    public String getMediaType() {
-        return mediaType;
+    /**
+     * Gets media type.
+     *
+     * @return the media type
+     */
+    public String getsupportedPlaylistFormats() {
+        return supportedPlaylistFormats;
     }
 
-    public void setMediaType(String mediaType) {
-        this.mediaType = mediaType;
+    /**
+     * Sets media type.
+     *
+     * @param supportedPlaylistFormats the media type
+     */
+    public void setsupportedPlaylistFormats(String supportedPlaylistFormats) {
+        this.supportedPlaylistFormats = supportedPlaylistFormats;
+    }
+
+    @Override
+    public void setType(ItemType type) {
+
     }
 }
