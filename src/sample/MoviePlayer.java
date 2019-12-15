@@ -32,6 +32,8 @@ public class MoviePlayer extends Product implements MultimediaControl {
         setMonitorType(monitorType);
     }
 
+    //toString method that calls the Product toString and displays
+    // the monitor and the screen details.
     @Override
     public String toString() {
         return super.toString() + "\n" + screen + "\n" + "Monitor Type: " + monitorType;

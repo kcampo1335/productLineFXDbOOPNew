@@ -111,14 +111,29 @@ public class Controller {
     @FXML
     public Label existingLBL;
 
-    @FXML public Tab tab1;
-    @FXML public Tab tab2;
-    @FXML public Tab tab3;
+    /**
+     * The Tab 1.
+     */
+    @FXML
+    public Tab tab1;
+
+    /**
+     * The Tab 2.
+     */
+    @FXML
+    public Tab tab2;
+
+    /**
+     * The Tab 3.
+     */
+    @FXML
+    public Tab tab3;
 
 
     //global
     private Connection conn;
 
+    //hold all of the Products that can be produced.
     private final ObservableList<Product> ProductLine = FXCollections.observableArrayList();
 
     /**
@@ -147,14 +162,18 @@ public class Controller {
         preparedStatement.setString(2, manufacturerName);
         preparedStatement.setString(3, productChoice);
         preparedStatement.executeUpdate();
+
+        //clears textfields
         productNameBox.clear();
         manufacturerNameBox.clear();
 
+        //sets column values
         tableColOne.setCellValueFactory(new PropertyValueFactory<>("name"));
         tableColTwo.setCellValueFactory(new PropertyValueFactory<>("manufacturer"));
         tableColThree.setCellValueFactory(new PropertyValueFactory<>("type"));
         tableView.setItems(ProductLine);
         listViewOne.setItems(ProductLine);
+
         preparedStatement.close();
         conn.close();
     }
@@ -164,6 +183,8 @@ public class Controller {
      */
     public void initialize() {
         initializationData();
+
+        //shows numbers 1 through 10 for the quantity combo box.
         ObservableList<Integer> prodQuantity = FXCollections.observableArrayList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 
@@ -171,6 +192,7 @@ public class Controller {
         producesCombo.getSelectionModel().selectFirst();
         producesCombo.setEditable(true);
 
+        //creates the item list
         ObservableList<String> itemList = FXCollections.observableArrayList();
         for (ItemType itemTypeChoice : ItemType.values()) {
             System.out.println(itemTypeChoice + " " + itemTypeChoice.label);

@@ -40,18 +40,22 @@ public class AudioPlayer extends Product implements MultimediaControl {
         return super.toString() + spec + media;
     }
 
+    //displays play to the console
     public void play() {
         System.out.println("Playing");
     }
 
+    //displays stopping to the console
     public void stop() {
         System.out.println("Stopping");
     }
 
+    // displays next to the console
     public void next() {
         System.out.println("Next");
     }
 
+    // dsplays next to the console
     public void previous() {
         System.out.println("Previous");
     }

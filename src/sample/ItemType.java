@@ -37,6 +37,8 @@ public enum ItemType {
      *
      * @return the string
      */
+    //Update your code to insert a product to use the
+    // choicebox selected item.
     public String getLabel() {
         return this.label;
     }

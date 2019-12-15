@@ -6,13 +6,13 @@ import java.util.Date;
 /**
  * The type Production record stores product information and helps to create a serial number for products.
  *
- * @author  Kathryn Campo
+ * @author Kathryn Campo
  */
 public class ProductionRecord {
                  private int productionNumber;
                  private int productID;
                  private String serialNumber;
-                  private Date dateProduced;
+                 private Date dateProduced;
 
 
     /**
@@ -35,8 +35,11 @@ public class ProductionRecord {
      */
     public ProductionRecord(int productID) {
         this.productID = productID;
+        //set productionNumber to 0
         productionNumber = 0;
+        //set serialNumber to "0"
         serialNumber = "0";
+        //produces the date
         dateProduced = new Date();
     }
 
