@@ -10,6 +10,8 @@ In addition to the ability to record production, the software also needs the abi
 
 ![](prodLineGif.gif)
 
+![](1giphy.gif)
+
 ## Documentation
 
 Create a docs folder in your project. If using Java, generate JavaDoc in your IDE. If using C++, use Doxygen. Change repository settings (using Settings at top of page) to use GitHub Pages with your docs folder. Add a link to the javadoc/doxygen index.html file with this markdown: \[Text to appear]\(URL) <br />
@@ -22,13 +24,7 @@ Sample: \[JavaDoc]\(https://pv-cop.github.io/PV-README-TEMPLATE/javadoc/index.ht
 
 <img src="https://i.ibb.co/7kmyxqy/diagram.jpg" alt="diagram" border="0"></a>
 
-## Getting Started
 
-Instructions to get a copy of the project up and running on someone's local machine for development and testing purposes.
-<br />
-Note for real project: You want to be able to share your project and enable collaboration. 
-<br />
-Note for school project: You want a potential client or hirer to be able to run your program. 
 
 ## Built With
 
