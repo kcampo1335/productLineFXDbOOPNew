@@ -1,11 +1,12 @@
 package sample;
 
 /**
- * The type Product.
+ * The Product class handles all of the fuctionality for products.
+ *
+ * @author Kathryn Campo
  */
 public abstract class Product implements Item {
-
-    private int Id;
+    private int id;
     /**
      * The Type.
      */
@@ -46,7 +47,7 @@ public abstract class Product implements Item {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public String getManufacturer() {

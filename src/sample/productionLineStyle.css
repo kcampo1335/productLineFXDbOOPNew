@@ -1,6 +1,28 @@
+
+
 root {
     display: block;
 }
 .root{
-    -fx-background-image: url("backgroundImage.jpg")
+    -fx-background-image: url("flowers.jpeg")
 }
+.label {
+    -fx-text-fill: #654321;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+}
+.button {
+    -background-color: #FFB6C1;
+    -fx-text-fill: #654321;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+
+}
+
+.tab{
+    -background-color: #23b83c;
+    -fx-text-fill:#FFB6C1;
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+}
+

@@ -1,7 +1,9 @@
 package sample;
 
 /**
- * The interface Multimedia control.
+ * The interface Multimedia control is where the functions for audioplayer and movieplayer are found.
+ *
+ * @author Kathryn Campo
  */
 public interface MultimediaControl {
     /**

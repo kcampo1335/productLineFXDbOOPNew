@@ -3,13 +3,20 @@ package sample;
 import sample.MultimediaControl;
 import sample.Product;
 
+
 /**
- * The type Audio player.
+ * The type Audio player. This class creates all of the details of an audio player.
+ *
+ * @author Kathryn Campo
  */
+
+// A lot of checkstyle indentation errors. I am not sure why or how to fix the issue.
+
 public class AudioPlayer extends Product implements MultimediaControl {
 
     private String supportedAudioFormats;
     private String supportedPlaylistFormats;
+
 
     /**
      * Instantiates a new Audio player.
@@ -18,9 +25,10 @@ public class AudioPlayer extends Product implements MultimediaControl {
      * @param manufacturer             the manufacturer
      * @param type                     the type
      * @param supportedAudioFormats    the supported audio formats
-     * @param supportedPlaylistFormats the media type
+     * @param supportedPlaylistFormats the supported playlist formats
      */
-    AudioPlayer(String name, String manufacturer, ItemType type, String supportedAudioFormats, String supportedPlaylistFormats) {
+    AudioPlayer(String name, String manufacturer, ItemType type, String supportedAudioFormats,
+                String supportedPlaylistFormats) {
         super(name, manufacturer, type);
         this.supportedAudioFormats = supportedAudioFormats;
         this.supportedPlaylistFormats = supportedPlaylistFormats;
@@ -48,37 +56,39 @@ public class AudioPlayer extends Product implements MultimediaControl {
         System.out.println("Previous");
     }
 
+
     /**
-     * Gets audio specification.
+     * Gets audio formats.
      *
-     * @return the audio specification
+     * @return the audio formats
      */
     public String getsupportedAudioFormats() {
         return supportedAudioFormats;
     }
 
     /**
-     * Sets audio specification.
+     * Sets audio formats.
      *
-     * @param supportedAudioFormats the audio specification
+     * @param supportedAudioFormats the supported audio formats
      */
     public void setsupportedAudioFormats(String supportedAudioFormats) {
         this.supportedAudioFormats = supportedAudioFormats;
     }
 
     /**
-     * Gets media type.
+     * Gets playlist formats.
      *
-     * @return the media type
+     * @return the playlist formats
      */
     public String getsupportedPlaylistFormats() {
         return supportedPlaylistFormats;
     }
 
+
     /**
-     * Sets media type.
+     * Sets playlist formats.
      *
-     * @param supportedPlaylistFormats the media type
+     * @param supportedPlaylistFormats the supported playlist formats
      */
     public void setsupportedPlaylistFormats(String supportedPlaylistFormats) {
         this.supportedPlaylistFormats = supportedPlaylistFormats;

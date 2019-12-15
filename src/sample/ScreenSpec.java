@@ -1,7 +1,9 @@
 package sample;
 
 /**
- * The interface Screen spec.
+ * The interface Screen spec is where the Screens resolution, refresh rate, and response time is obtained.
+ *
+ * @author Kathryn Campo
  */
 public interface ScreenSpec {
 

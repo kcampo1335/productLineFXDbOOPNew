@@ -11,61 +11,115 @@ import java.sql.*;  // for initialization method
 
 
 /**
- * The type Controller. Controls sample.fxml
+ * The type Controller. Controls sample.fxml. IT handles the add product button
+ * and record production button. This class allows users to save to the database.
+ *
+ * @author Kathryn Campo
  */
 public class Controller {
-
     /**
      * The Add product button.
      */
-    @FXML public Button AddProductButton;
+    @FXML
+    public Button addProductButton;
     /**
      * The Record production button.
      */
-    @FXML public Button RecordProductionButton;
-    @FXML public ComboBox<Integer> producesCombo;
+    @FXML
+    public Button recordProductionButton;
+    /**
+     * The Produces combo.
+     */
+    @FXML
+    public ComboBox<Integer> producesCombo;
     /**
      * The Item type choice box.
      */
-    @FXML public ChoiceBox<String> itemTypeChoiceBox;
+    @FXML
+    public ChoiceBox<String> itemTypeChoiceBox;
     /**
      * The Table view.
      */
-    @FXML public TableView<Product> tableView;
+    @FXML
+    public TableView<Product> tableView;
     /**
      * The Table col one.
      */
-    @FXML public TableColumn <?, ?> tableColOne;
+    @FXML
+    public TableColumn<?, ?> tableColOne;
     /**
      * The Table col two.
      */
-    @FXML public TableColumn <?, ?> tableColTwo;
+    @FXML
+    public TableColumn<?, ?> tableColTwo;
     /**
      * The Table col three.
      */
-    @FXML public TableColumn <?, ?> tableColThree;
+    @FXML
+    public TableColumn<?, ?> tableColThree;
     /**
      * The List view one.
      */
-    @FXML public ListView<Product> listViewOne;
+    @FXML
+    public ListView<Product> listViewOne;
     /**
      * The Text area.
      */
-    @FXML public TextArea textArea;
+    @FXML
+    public TextArea textArea;
     /**
      * The Product name box.
      */
-    @FXML public TextField productNameBox;
+    @FXML
+    public TextField productNameBox;
     /**
      * The Manufacturer name box.
      */
-    @FXML public TextField manufacturerNameBox;
+    @FXML
+    public TextField manufacturerNameBox;
+
+    /**
+     * The Choose product.
+     */
+    @FXML
+    public Label chooseProduct;
+
+    /**
+     * The Choose quantity lbl.
+     */
+    @FXML
+    public Label chooseQuantityLBL;
+    /**
+     * The Prod name lbl.
+     */
+    @FXML
+    public Label prodNameLBL;
+
+    /**
+     * The Man lbl.
+     */
+    @FXML
+    public Label manLBL;
+    /**
+     * The It lbl.
+     */
+    @FXML
+    public Label itLBL;
+    /**
+     * The Existing lbl.
+     */
+    @FXML
+    public Label existingLBL;
+
+    @FXML public Tab tab1;
+    @FXML public Tab tab2;
+    @FXML public Tab tab3;
 
 
     //global
     private Connection conn;
 
-    private final ObservableList< Product> ProductLine = FXCollections.observableArrayList();
+    private final ObservableList<Product> ProductLine = FXCollections.observableArrayList();
 
     /**
      * Handle record production button.
@@ -89,9 +143,9 @@ public class Controller {
         String dataInfo = "Insert into PRODUCT( NAME, TYPE, MANUFACTURER) VALUES (?,?,?)";
 
         PreparedStatement preparedStatement = conn.prepareStatement(dataInfo);
-        preparedStatement.setString(1,productName);
-        preparedStatement.setString(2,manufacturerName);
-        preparedStatement.setString(3,productChoice);
+        preparedStatement.setString(1, productName);
+        preparedStatement.setString(2, manufacturerName);
+        preparedStatement.setString(3, productChoice);
         preparedStatement.executeUpdate();
         productNameBox.clear();
         manufacturerNameBox.clear();
@@ -110,7 +164,7 @@ public class Controller {
      */
     public void initialize() {
         initializationData();
-        ObservableList<Integer> prodQuantity = FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10);
+        ObservableList<Integer> prodQuantity = FXCollections.observableArrayList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 
         producesCombo.setItems(prodQuantity);
@@ -118,7 +172,7 @@ public class Controller {
         producesCombo.setEditable(true);
 
         ObservableList<String> itemList = FXCollections.observableArrayList();
-        for( ItemType itemTypeChoice: ItemType.values()) {
+        for (ItemType itemTypeChoice : ItemType.values()) {
             System.out.println(itemTypeChoice + " " + itemTypeChoice.label);
             itemList.add(new String().valueOf(itemTypeChoice));
 
@@ -132,7 +186,7 @@ public class Controller {
     /**
      * Initialization data.
      */
-    public void initializationData(){
+    public void initializationData() {
 
         //  Database credentials
         final String JDBC_DRIVER = "org.h2.Driver";

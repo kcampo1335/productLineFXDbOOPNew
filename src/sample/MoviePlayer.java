@@ -1,7 +1,10 @@
 package sample;
 
 /**
- * The type Movie player.
+ * The type Movie player. Create a class called MoviePlayer that extends Product and implements MultimediaControl.
+ * The movieplayer class is where information regarding movieplayer can be obtained or accessed.
+ *
+ * @author Kathryn Campo
  */
 public class MoviePlayer extends Product implements MultimediaControl {
 
@@ -17,39 +20,40 @@ public class MoviePlayer extends Product implements MultimediaControl {
     /**
      * Instantiates a new Movie player.
      *
-     * @param Name           the name
-     * @param Manufacturer   the manufacturer
-     * @param theScreen      the the screen
-     * @param theMonitorType the the monitor type
+     * @param name         the name
+     * @param manufacturer the manufacturer
+     * @param screen       the the screen
+     * @param monitorType  the the monitor type
      */
-    MoviePlayer(String Name, String Manufacturer, Screen theScreen, MonitorType theMonitorType){
-        super(Name, Manufacturer,ItemType.VISUAL);
-        setScreen(theScreen);
-        setMonitorType(theMonitorType);
+    //Create a constructor that accepts the name, manufacturer, a screen, and a monitor type. The constructor can set the item type to VISUAL.
+    MoviePlayer(String name, String manufacturer, Screen screen, MonitorType monitorType) {
+        super(name, manufacturer, ItemType.VISUAL);
+        setScreen(screen);
+        setMonitorType(monitorType);
     }
 
     @Override
-    public String toString(){
-        return super.toString() +"\n" + screen + "\n" + "Monitor Type: " + monitorType;
+    public String toString() {
+        return super.toString() + "\n" + screen + "\n" + "Monitor Type: " + monitorType;
     }
 
     @Override
-    public void play(){
+    public void play() {
         System.out.println("Playing movie");
     }
 
     @Override
-    public void stop(){
+    public void stop() {
         System.out.println("Stopping movie");
     }
 
     @Override
-    public void previous(){
+    public void previous() {
         System.out.println("Previous movie");
     }
 
     @Override
-    public void next(){
+    public void next() {
         System.out.println("Next movie");
     }
 
@@ -65,10 +69,10 @@ public class MoviePlayer extends Product implements MultimediaControl {
     /**
      * Set screen.
      *
-     * @param sCreen the s creen
+     * @param screen the s creen
      */
-    public void setScreen(Screen sCreen){
-        this.screen = sCreen;
+    public void setScreen(Screen screen) {
+        this.screen = screen;
     }
 
     /**
@@ -76,17 +80,17 @@ public class MoviePlayer extends Product implements MultimediaControl {
      *
      * @return the monitor type
      */
-    public MonitorType getMonitorType(){
+    public MonitorType getMonitorType() {
         return monitorType;
     }
 
     /**
      * Set monitor type.
      *
-     * @param monitoRType the monito r type
+     * @param monitorType the monito r type
      */
-    public void setMonitorType(MonitorType monitoRType){
-        this.monitorType = monitoRType;
+    public void setMonitorType(MonitorType monitorType) {
+        this.monitorType = monitorType;
     }
 
     @Override

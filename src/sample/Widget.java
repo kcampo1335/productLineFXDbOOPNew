@@ -1,7 +1,9 @@
 package sample;
 
 /**
- * The type Widget.
+ * The Widget class is used to create products.
+ *
+ * @author Kathryn Campo
  */
 class Widget extends Product {
 

@@ -29,7 +29,7 @@
     <children>
         <TabPane prefHeight="300.0" prefWidth="300.0" styleClass="main-tab-pane" stylesheets="@productionLineStyle.css" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
             <tabs>
-                <Tab text="Product Line">
+                <Tab fx:id="tab1" text="Product Line">
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <opaqueInsets>
@@ -47,16 +47,16 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label text="Product Name" textFill="#e6fe0f" />
-                              <Label text="Manufacturer" textFill="#e3f420" GridPane.rowIndex="1" />
+                              <Label fx:id="prodNameLBL" text="Product Name" textFill="#e6fe0f" />
+                              <Label fx:id="manLBL" text="Manufacturer" textFill="#e3f420" GridPane.rowIndex="1" />
                               <TextField fx:id="manufacturerNameBox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <TextField fx:id="productNameBox" GridPane.columnIndex="1" />
                               <ChoiceBox fx:id="itemTypeChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label text="Item Type" textFill="#f5fc13" GridPane.rowIndex="2" />
+                              <Label fx:id="itLBL" text="Item Type" textFill="#f5fc13" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
-                        <Button fx:id="AddProductButton" layoutX="150.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleAddProductButton" text="Add Product" />
-                        <Label layoutY="163.0" text="Existing Products" textFill="#d4d415" />
+                        <Button fx:id="addProductButton" layoutX="150.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleAddProductButton" text="Add Product" />
+                        <Label fx:id="existingLBL" layoutX="46.0" layoutY="161.0" text="Existing Products" textFill="#d4d415" />
                         <TableView fx:id="tableView" layoutX="46.0" layoutY="180.0" prefHeight="77.0" prefWidth="221.0" stylesheets="@productionLineStyle.css">
                           <columns>
                             <TableColumn fx:id="tableColOne" prefWidth="75.20001220703125" text="Product" />
@@ -67,19 +67,19 @@
                      </children>
                   </AnchorPane>
                </content></Tab>
-                <Tab text="Produce">
+                <Tab fx:id="tab2" text="Produce">
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="35.0" layoutY="6.0" text="Choose Product" textFill="#dc19c9" />
-                        <ListView fx:id="listViewOne" layoutX="14.0" layoutY="30.0" prefHeight="121.0" prefWidth="126.0" />
-                        <Label layoutX="175.0" layoutY="30.0" text="Choose Quantity" textFill="#eb20d3" />
-                        <ComboBox fx:id="producesCombo" layoutX="144.0" layoutY="66.0" prefWidth="150.0" />
-                        <Button fx:id="RecordProductionButton" layoutX="161.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleRecordProductionButton" text="Record Production" />
+                        <Label fx:id="chooseProduct" layoutX="105.0" layoutY="14.0" text="Choose Product" textFill="#dc19c9" />
+                        <ListView fx:id="listViewOne" layoutX="12.0" layoutY="38.0" prefHeight="121.0" prefWidth="273.0" />
+                        <Label fx:id="chooseQuantityLBL" layoutX="192.0" layoutY="172.0" text="Choose Quantity" textFill="#eb20d3" />
+                        <ComboBox fx:id="producesCombo" layoutX="14.0" layoutY="168.0" prefWidth="150.0" />
+                        <Button fx:id="recordProductionButton" layoutX="49.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleRecordProductionButton" text="Record Production" />
                      </children>
                   </AnchorPane>
                </content></Tab>
-                <Tab text="Production Log">
+                <Tab fx:id="tab3" text="Production Log">
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>

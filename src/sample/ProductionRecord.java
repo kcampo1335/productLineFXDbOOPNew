@@ -4,7 +4,9 @@ import java.util.Date;
 
 
 /**
- * The type Production record.
+ * The type Production record stores product information and helps to create a serial number for products.
+ *
+ * @author  Kathryn Campo
  */
 public class ProductionRecord {
                  private int productionNumber;
@@ -12,11 +14,12 @@ public class ProductionRecord {
                  private String serialNumber;
                   private Date dateProduced;
 
+
     /**
-     * This method will increment the product id with the different items that are added.
+     * Instantiates a new Production record.
      *
-     * @param productProduced - puts the number of the product being produced.
-     * @param items           - sets the number of the id and increments.
+     * @param productProduced the product produced
+     * @param items           the items
      */
     public ProductionRecord(Product productProduced, int items) {
         String id = String.format("%05d", items);
@@ -26,9 +29,9 @@ public class ProductionRecord {
     }
 
     /**
-     * This method will start with one product an display the information about the product.
+     * Instantiates a new Production record.
      *
-     * @param productID - displays the id.
+     * @param productID the product id
      */
     public ProductionRecord(int productID) {
         this.productID = productID;
@@ -37,13 +40,14 @@ public class ProductionRecord {
         dateProduced = new Date();
     }
 
+
     /**
-     * This method will put in the id, serial number, product number and the date into the dataase.
+     * Instantiates a new Production record.
      *
-     * @param productionNumber - adds a production number to the product.
-     * @param productID        - displays the id for the product.
-     * @param serialNumber     - displays the serial number for the product.
-     * @param dateProduced     - displays the date and time the item was added to the database.
+     * @param productionNumber the production number
+     * @param productID        the product id
+     * @param serialNumber     the serial number
+     * @param dateProduced     the date produced
      */
     public ProductionRecord(
             int productionNumber, int productID, String serialNumber, Date dateProduced) {
@@ -53,11 +57,7 @@ public class ProductionRecord {
         this.serialNumber = serialNumber;
     }
 
-    /**
-     * This method will print out the product number, serial number, date and the id on new lines.
-     *
-     * @return - will display the information in a neat fashion.
-     */
+
     public String toString() {
         return "Prod. Num: "
                 + productionNumber
@@ -69,73 +69,79 @@ public class ProductionRecord {
                 + dateProduced;
     }
 
+
     /**
-     * This method will grab the production number.
+     * Gets production num.
      *
-     * @return - will return the production number.
+     * @return the production num
      */
     public int getProductionNum() {
         return productionNumber;
     }
 
     /**
-     * This method will set the production number.
+     * Sets production num.
      *
-     * @param productionNumber - will display a number.
+     * @param productionNumber the production number
      */
     public void setProductionNum(int productionNumber) {
         this.productionNumber = productionNumber;
     }
 
+
     /**
-     * This method will get the product id.
+     * Gets product id.
      *
-     * @return - will return the product id.
+     * @return the product id
      */
     public int getProductID() {
         return productID;
     }
 
+
     /**
-     * This method will set the product id.
+     * Sets product id.
      *
-     * @param productID - will display the product id.
+     * @param productID the product id
      */
     public void setProductID(int productID) {
         this.productID = productID;
     }
 
     /**
-     * This method will get the serial number of the product.
+     * Gets serial num.
      *
-     * @return - will return the serial number.
+     * @return the serial num
      */
     public String getSerialNum() {
         return serialNumber;
     }
 
+
     /**
-     * This method will set the serial number of the product.
+     * Sets serial num.
      *
-     * @param serialNumber - will display the serial number of the product.
+     * @param serialNumber the serial number
      */
     public void setSerialNum(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 
+
     /**
-     * This method will get the date the product was made.
+     * Gets prod date.
      *
-     * @return - will return the date.
+     * @return the prod date
      */
     public Date getProdDate() {
         return dateProduced;
     }
 
+
     /**
-     * This method will set the date the product was made.
+     * Sets prod date.
      *
-     * @param dateProduced - will display the date.
+     * @param dateProduced the date produced
      */
     public void setProdDate(Date dateProduced) {
         this.dateProduced = dateProduced;

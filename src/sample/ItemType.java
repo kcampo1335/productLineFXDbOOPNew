@@ -1,32 +1,34 @@
 package sample;
 
 /**
- * The enum Item type.
+ * The enum Item type store information on the different types of items.
+ *
+ * @author Kathryn Campo
  */
 public enum ItemType {
     /**
      * Audio item type.
      */
-    AUDIO ("AU"),
+    AUDIO("AU"),
     /**
      * Visual item type.
      */
-    VISUAL ("VI"),
+    VISUAL("VI"),
     /**
      * Audio mobile item type.
      */
-    AUDIO_MOBILE ("AM"),
+    AUDIO_MOBILE("AM"),
     /**
      * Visual mobile item type.
      */
-    VISUAL_MOBILE ("VM");
+    VISUAL_MOBILE("VM");
 
     /**
      * The Label.
      */
     public final String label;
 
-    ItemType(String code){
+    ItemType(String code) {
         label = code;
     }
 
@@ -35,7 +37,7 @@ public enum ItemType {
      *
      * @return the string
      */
-    public String getLabel(){
+    public String getLabel() {
         return this.label;
     }
 }

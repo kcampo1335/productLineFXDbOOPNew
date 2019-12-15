@@ -1,7 +1,9 @@
 package sample;
 
 /**
- * The interface Item.
+ * The interface Item forces all classes to implement the functions in the interface.
+ *
+ * @author Kathryn Campo
  */
 public interface Item {
 
