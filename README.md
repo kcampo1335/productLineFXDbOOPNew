@@ -24,13 +24,7 @@ Sample: \[JavaDoc]\(https://pv-cop.github.io/PV-README-TEMPLATE/javadoc/index.ht
 
 <img src="https://i.ibb.co/7kmyxqy/diagram.jpg" alt="diagram" border="0"></a>
 
-## Getting Started
 
-Instructions to get a copy of the project up and running on someone's local machine for development and testing purposes.
-<br />
-Note for real project: You want to be able to share your project and enable collaboration. 
-<br />
-Note for school project: You want a potential client or hirer to be able to run your program. 
 
 ## Built With
 
