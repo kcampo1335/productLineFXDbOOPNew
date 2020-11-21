@@ -8,35 +8,21 @@ package sample;
  */
 public class MoviePlayer extends Product implements MultimediaControl {
 
-    /**
-     * The Screen.
-     */
     Screen screen;
-    /**
-     * The Monitor type.
-     */
-    MonitorType monitorType;
 
-    /**
-     * Instantiates a new Movie player.
-     *
-     * @param name         the name
-     * @param manufacturer the manufacturer
-     * @param screen       the the screen
-     * @param monitorType  the the monitor type
-     */
+
     //Create a constructor that accepts the name, manufacturer, a screen, and a monitor type. The constructor can set the item type to VISUAL.
-    MoviePlayer(String name, String manufacturer, Screen screen, MonitorType monitorType) {
+    MoviePlayer(String name, String manufacturer, Screen screen) {
         super(name, manufacturer, ItemType.VISUAL);
         setScreen(screen);
-        setMonitorType(monitorType);
+
     }
 
     //toString method that calls the Product toString and displays
     // the monitor and the screen details.
     @Override
     public String toString() {
-        return super.toString() + "\n" + screen + "\n" + "Monitor Type: " + monitorType;
+        return super.toString() + "\n" + screen + "\n";
     }
 
     @Override
@@ -59,41 +45,14 @@ public class MoviePlayer extends Product implements MultimediaControl {
         System.out.println("Next movie");
     }
 
-    /**
-     * Gets screen.
-     *
-     * @return the screen
-     */
     public Screen getScreen() {
         return screen;
     }
 
-    /**
-     * Set screen.
-     *
-     * @param screen the s creen
-     */
     public void setScreen(Screen screen) {
         this.screen = screen;
     }
 
-    /**
-     * Get monitor type monitor type.
-     *
-     * @return the monitor type
-     */
-    public MonitorType getMonitorType() {
-        return monitorType;
-    }
-
-    /**
-     * Set monitor type.
-     *
-     * @param monitorType the monito r type
-     */
-    public void setMonitorType(MonitorType monitorType) {
-        this.monitorType = monitorType;
-    }
 
     @Override
     public void setType(ItemType type) {

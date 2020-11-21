@@ -5,28 +5,15 @@ import sample.Product;
 
 
 /**
- * The type Audio player. This class creates all of the details of an audio player.
- *
  * @author Kathryn Campo
  */
 
-// A lot of checkstyle indentation errors. I am not sure why or how to fix the issue.
 
 public class AudioPlayer extends Product implements MultimediaControl {
 
     private String supportedAudioFormats;
     private String supportedPlaylistFormats;
 
-
-    /**
-     * Instantiates a new Audio player.
-     *
-     * @param name                     the name
-     * @param manufacturer             the manufacturer
-     * @param type                     the type
-     * @param supportedAudioFormats    the supported audio formats
-     * @param supportedPlaylistFormats the supported playlist formats
-     */
     AudioPlayer(String name, String manufacturer, ItemType type, String supportedAudioFormats,
                 String supportedPlaylistFormats) {
         super(name, manufacturer, type);
@@ -40,60 +27,35 @@ public class AudioPlayer extends Product implements MultimediaControl {
         return super.toString() + spec + media;
     }
 
-    //displays play to the console
     public void play() {
         System.out.println("Playing");
     }
 
-    //displays stopping to the console
     public void stop() {
         System.out.println("Stopping");
     }
 
-    // displays next to the console
     public void next() {
         System.out.println("Next");
     }
 
-    // dsplays next to the console
     public void previous() {
         System.out.println("Previous");
     }
 
-
-    /**
-     * Gets audio formats.
-     *
-     * @return the audio formats
-     */
     public String getsupportedAudioFormats() {
         return supportedAudioFormats;
     }
 
-    /**
-     * Sets audio formats.
-     *
-     * @param supportedAudioFormats the supported audio formats
-     */
+
     public void setsupportedAudioFormats(String supportedAudioFormats) {
         this.supportedAudioFormats = supportedAudioFormats;
     }
 
-    /**
-     * Gets playlist formats.
-     *
-     * @return the playlist formats
-     */
     public String getsupportedPlaylistFormats() {
         return supportedPlaylistFormats;
     }
 
-
-    /**
-     * Sets playlist formats.
-     *
-     * @param supportedPlaylistFormats the supported playlist formats
-     */
     public void setsupportedPlaylistFormats(String supportedPlaylistFormats) {
         this.supportedPlaylistFormats = supportedPlaylistFormats;
     }
