@@ -3,7 +3,7 @@ package sample;
 /**
  * @author Kathryn Campo
  */
-public class Screen implements ScreenSpec {
+public class Screen {
     private String resolution;
     private int refreshRate;
     private int responseTime;
@@ -16,29 +16,5 @@ public class Screen implements ScreenSpec {
 
     public String toString() {
         return "Screen:" + "\n" + "Resolution: " + resolution + "\n" + "Refresh rate: " + refreshRate + "\n" + "Response time: " + responseTime;
-    }
+    }}
 
-    public String getResolution() {
-        return resolution;
-    }
-
-    public void setResolution(String Resolution) {
-        resolution = Resolution;
-    }
-
-    public int getRefreshRate() {
-        return refreshRate;
-    }
-
-    public void setRefreshRate(int RefreshRate) {
-        refreshRate = RefreshRate;
-    }
-
-    public int getResponseTime() {
-        return responseTime;
-    }
-
-    public void setResponseTime(int ResponseTime) {
-        responseTime = ResponseTime;
-    }
-}

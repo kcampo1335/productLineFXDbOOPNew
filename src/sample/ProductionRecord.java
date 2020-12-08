@@ -50,35 +50,5 @@ public class ProductionRecord {
                 + dateProduced;
     }
 
-    public int getProductionNum() {
-        return productionNumber;
-    }
 
-    public void setProductionNum(int productionNumber) {
-        this.productionNumber = productionNumber;
-    }
-
-    public int getProductID() {
-        return productID;
-    }
-
-    public void setProductID(int productID) {
-        this.productID = productID;
-    }
-
-    public String getSerialNum() {
-        return serialNumber;
-    }
-
-    public void setSerialNum(String serialNumber) {
-        this.serialNumber = serialNumber;
-    }
-
-    public Date getProdDate() {
-        return dateProduced;
-    }
-
-    public void setProdDate(Date dateProduced) {
-        this.dateProduced = dateProduced;
-    }
 }
